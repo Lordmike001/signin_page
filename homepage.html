@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen text-white font-sans bg-gradient-to-br from-[#054a9e] via-[#0a64cc] to-[#1384f5] bg-fixed relative overflow-x-hidden">
+
+  <!-- Soft background blobs (replace with your 3D background image if you like) -->
+  <div class="pointer-events-none absolute -top-24 -left-24 w-96 h-96 rounded-full bg-sky-300/20 blur-3xl"></div>
+  <div class="pointer-events-none absolute top-1/3 -right-24 w-[28rem] h-[28rem] rounded-full bg-blue-900/40 blur-3xl"></div>
+
+  <!-- Navbar -->
+  <header class="relative z-10 mx-auto max-w-6xl px-4 pt-6">
+    <nav class="flex items-center justify-between rounded-2xl border border-white/20 bg-white/10 px-5 py-3 backdrop-blur-xl">
+      <a href="#" class="text-lg font-semibold">Your logo</a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <li><a href="#" class="text-white font-medium">Home</a></li>
+        <li><a href="#" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#" class="hover:text-white transition">Messages</a></li>
+        <li><a href="#" class="hover:text-white transition">Settings</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-full bg-white/20 grid place-items-center text-sm font-semibold">M</div>
+        <button id="logout" class="rounded-lg bg-[#03305f] px-4 py-2 text-sm font-medium hover:bg-[#04407f] transition">
+          Log out
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative z-10 mx-auto max-w-6xl px-4 py-10 space-y-8">
+
+    <!-- Welcome -->
+    <section class="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl">
+      <p class="text-sm text-white/70">Welcome back</p>
+      <h1 class="mt-1 text-3xl md:text-4xl font-bold">Hello, Michael 👋</h1>
+      <p class="mt-3 max-w-xl text-white/80">
+        Here's a quick look at what's happening today. Pick up where you left off or start something new.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#" class="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-[#0a4aa3] hover:bg-sky-100 transition">Get started</a>
+        <a href="#" class="rounded-lg border border-white/30 px-5 py-2.5 text-sm font-semibold hover:bg-white/10 transition">View profile</a>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="grid gap-4 sm:grid-cols-3">
+      <div class="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl">
+        <p class="text-sm text-white/70">Projects</p>
+        <p class="mt-2 text-3xl font-bold">12</p>
+        <p class="mt-1 text-xs text-sky-200">+2 this week</p>
+      </div>
+      <div class="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl">
+        <p class="text-sm text-white/70">Messages</p>
+        <p class="mt-2 text-3xl font-bold">8</p>
+        <p class="mt-1 text-xs text-sky-200">3 unread</p>
+      </div>
+      <div class="rounded-2xl border border-white/20 bg-white/10 p-5 backdrop-blur-xl">
+        <p class="text-sm text-white/70">Tasks done</p>
+        <p class="mt-2 text-3xl font-bold">74%</p>
+        <div class="mt-3 h-2 rounded-full bg-white/20">
+          <div class="h-2 w-[74%] rounded-full bg-sky-300"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick actions + Activity -->
+    <section class="grid gap-6 lg:grid-cols-3">
+      <div class="lg:col-span-2 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl">
+        <h2 class="text-lg font-semibold">Quick actions</h2>
+        <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <a href="#" class="flex flex-col items-center gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20 transition">
+            <span class="text-2xl">📁</span><span class="text-sm">New project</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20 transition">
+            <span class="text-2xl">✉️</span><span class="text-sm">Messages</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20 transition">
+            <span class="text-2xl">📊</span><span class="text-sm">Reports</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-2 rounded-xl bg-white/10 p-4 hover:bg-white/20 transition">
+            <span class="text-2xl">⚙️</span><span class="text-sm">Settings</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl">
+        <h2 class="text-lg font-semibold">Recent activity</h2>
+        <ul class="mt-4 space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-2 w-2 rounded-full bg-sky-300"></span>
+            <div><p>Project updated</p><p class="text-xs text-white/60">2 hours ago</p></div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-2 w-2 rounded-full bg-sky-300"></span>
+            <div><p>New message received</p><p class="text-xs text-white/60">Yesterday</p></div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1.5 h-2 w-2 rounded-full bg-sky-300"></span>
+            <div><p>Profile completed</p><p class="text-xs text-white/60">2 days ago</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative z-10 pb-8 text-center text-xs text-white/60">
+    © 2026 Your Company. All rights reserved.
+  </footer>
+
+  <script>
+    // Send the user back to the login page
+    document.getElementById("logout").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
